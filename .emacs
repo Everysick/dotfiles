@@ -9,33 +9,26 @@
 (setq frame-background-mode 'dark)
 (setq truncate-partial-width-windows nil)
 (custom-set-variables
- ;; indent
- '(tab-width 2)
- '(indent-tabs-mode nil)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auto-save-default nil)
+ '(cssm-indent-function (function cssm-c-style-indenter))
  '(cssm-indent-level 2)
- '(cssm-indent-function #'cssm-c-style-indenter)
-
- ;; open big file
- '(large-file-warning-threshold nil)
-
- ;; ignore the warnings of local variable values
- '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
-
- ;; js2-mode
+ '(indent-tabs-mode nil)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
-
- ;; json
- '(js-indent-level 2)
-
-  ;; disable backup
+ '(large-file-warning-threshold nil)
  '(make-backup-files nil)
-
- ;; disable auto save
- '(auto-save-default nil)
-
- ;; disable git
- '(vc-handled-backends ()))
+ '(safe-local-variable-values
+   (quote
+    ((eval add-hook
+           (quote write-file-hooks)
+           (quote time-stamp)))))
+ '(tab-width 2)
+ '(vc-handled-backends nil))
 
 ;; -Keybindings
 ;; --ToggleTruncateLines
@@ -164,3 +157,9 @@
 
 ;; -menu-bar
 (menu-bar-mode 0)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
