@@ -1,35 +1,45 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
-
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+(let ((default-directory (expand-file-name "~/.emacs.d/elisp")))
+  (add-to-list 'load-path default-directory)
+  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+      (normal-top-level-add-subdirs-to-load-path)))
 
 (setq gc-cons-threshold (* 50 gc-cons-threshold))
 
 (setq frame-background-mode 'dark)
 (setq truncate-partial-width-windows nil)
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auto-save-default nil)
- '(cssm-indent-function (function cssm-c-style-indenter))
- '(cssm-indent-level 2)
+ ;; highlight region
+ '(transient-mark-mode t)
+
+ ;; indent
+ '(tab-width 2)
  '(indent-tabs-mode nil)
- '(js-indent-level 2)
+ '(cssm-indent-level 2)
+ '(cssm-indent-function #'cssm-c-style-indenter)
+
+ ;; open big file
+ '(large-file-warning-threshold nil)
+
+ ;; ignore the warnings of local variable values
+ '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp)))))
+
+ ;; js2-mode
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
- '(large-file-warning-threshold nil)
+
+ ;; json
+ '(js-indent-level 2)
+
+  ;; disable backup
  '(make-backup-files nil)
- '(safe-local-variable-values
-   (quote
-    ((encoding . utf-8)
-     (eval add-hook
-           (quote write-file-hooks)
-           (quote time-stamp)))))
- '(tab-width 2)
- '(vc-handled-backends nil))
+
+ ;; disable auto save
+ '(auto-save-default nil)
+
+ ;; disable git
+ '(vc-handled-backends ()))
 
 ;; -Keybindings
 ;; --ToggleTruncateLines
@@ -54,7 +64,6 @@
                 (:propertize minor-mode-alist  face mode-line-modes)
                 (:propertize " "               face mode-line-modes)
                 (:propertize " %b "            face mode-line-buffer-name)
-                (:eval (git-branch-mode-line))
                 (:propertize " %+ %Z %p %l:%c "       face mode-line-info)))
 
 (set-face-attribute 'mode-line nil
@@ -71,9 +80,18 @@
                       :box nil
                       :weight weight))
 
-(make/set-face 'mode-line-modes       "color-125" "color-231" 'bold)
-(make/set-face 'mode-line-info        "color-231" "color-126" 'normal)
-(make/set-face 'mode-line-buffer-name "color-231" "color-125" 'bold)
+(make/set-face 'mode-line-modes
+               (concat "color-" (getenv "COLOR_DARK"))
+               "color-231"
+               'bold)
+(make/set-face 'mode-line-info
+               "color-231"
+               (concat "color-" (getenv "COLOR_LIGHT"))
+               'normal)
+(make/set-face 'mode-line-buffer-name
+               "color-231"
+               (concat "color-" (getenv "COLOR_DARK"))
+               'bold)
 
 ;; Other plugins
 
@@ -103,6 +121,7 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
 (ac-config-default)
+(setq ac-ignore-case nil)
 
 ;; -color-theme
 (load-theme 'dark-laptop t t)
@@ -156,23 +175,5 @@
         tab-width 8))
 (add-hook 'c-mode-hook 'linux-style)
 
-;; -prolog-mode
-(setq auto-mode-alist
-      (cons (cons "\\.pl" 'prolog-mode)
-            auto-mode-alist))
-
-;; -haskell-mode
-(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
-
 ;; -menu-bar
 (menu-bar-mode 0)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;;(require 'init-loader)
-;;(setq init-loader-show-log-after-init 'error-only)
-;;(init-loader-load "~/.emacs.d/inits")
