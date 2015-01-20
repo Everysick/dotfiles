@@ -24,7 +24,8 @@
  '(make-backup-files nil)
  '(safe-local-variable-values
    (quote
-    ((eval add-hook
+    ((encoding . utf-8)
+     (eval add-hook
            (quote write-file-hooks)
            (quote time-stamp)))))
  '(tab-width 2)
@@ -154,6 +155,14 @@
         indent-tabs-mode t
         tab-width 8))
 (add-hook 'c-mode-hook 'linux-style)
+
+;; -prolog-mode
+(setq auto-mode-alist
+      (cons (cons "\\.pl" 'prolog-mode)
+            auto-mode-alist))
+
+;; -haskell-mode
+(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 
 ;; -menu-bar
 (menu-bar-mode 0)

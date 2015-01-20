@@ -8,7 +8,7 @@ zstyle ':vcs_info:*' formats '[%b]'
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd() {
     LANG=en_US.UTF-8 vcs_info
-    PROMPT="%{${fg[green]}%}${vcs_info_msg_0_}%F{125}%~%f%(!.#.$) "
+    PROMPT="%{${fg[green]}%}${vcs_info_msg_0_}%F{200}%~%f%(!.#.$) "
     #psvar=()
     #psvar[1]=$(osx-cpu-temp)
     #RPROMPT="%{${fg[red]}%}[%1v]%{${reset_color}%}"
@@ -60,6 +60,7 @@ export PATH="${HOME}/bin:${PATH}"
 # copy alias
 alias -g C="| pbcopy"
 alias -g E="| ./a.out"
+alias -g TMP="cat /Users/everysick/competition/MyLibrary/contest_template.cpp >"
 
 # ls aliases
 alias l="ls"
