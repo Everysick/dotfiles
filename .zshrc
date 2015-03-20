@@ -73,7 +73,6 @@ zstyle ':completion:*:default' menu select=1
 setopt auto_pushd
 setopt auto_cd
 setopt nolistbeep
-setopt correct
 
 # history
 HISTFILE="${HOME}/.zsh_history"
