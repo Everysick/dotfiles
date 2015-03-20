@@ -1,3 +1,5 @@
 [user]
 	name = everysick
 	email = s.wakeup31@gmail.com
+[push]
+	default = simple
