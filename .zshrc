@@ -62,6 +62,7 @@ autoload -U compinit
 compinit
 autoload bashcompinit
 bashcompinit
+zstyle ":completion:*:commands" rehash 1
 
 # npm completion
 if [ -e "${HOME}/.zsh/npm-completion.bash" ]; then
@@ -73,6 +74,7 @@ zstyle ':completion:*:default' menu select=1
 setopt auto_pushd
 setopt auto_cd
 setopt nolistbeep
+setopt hist_ignore_space
 
 # history
 HISTFILE="${HOME}/.zsh_history"
@@ -99,6 +101,8 @@ bindkey "^[[B" down-line-or-search
 # PATH
 export PATH="${PATH}:/usr/local/bin:/usr/local/sbin"
 export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/.rbenv/bin:${PATH}"
+export PATH="$PATH:./node_modules/.bin"
 
 
 # copy alias
@@ -126,6 +130,7 @@ alias gco="git checkout"
 alias gmg="git merge"
 alias gcp="git cherry-pick"
 alias glg="git log"
+
 
 # heroku command
 alias brew-heroku="/usr/local/bin/heroku"

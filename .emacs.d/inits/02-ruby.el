@@ -1,4 +1,5 @@
 (setq ruby-deep-indent-paren-style nil)
+
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
         indent offset)
@@ -12,4 +13,4 @@
           (setq indent (current-indentation)))))
     (when indent
       (indent-line-to indent)
-            (when (> offset 0) (forward-char offset)))))
+        (when (> offset 0) (forward-char offset)))))
