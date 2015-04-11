@@ -42,7 +42,7 @@ PR_HOST="%m"
 PR_HOST_H="%B%K{$COLOR_DARK}%m%k%b${PR_COLON}"
 precmd() {
     LANG=en_US.UTF-8 vcs_info
-    PROMPT="%F{32}%~%F{166}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
+    PROMPT="%F{32}%~%F{93}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
     #if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
     #    PROMPT="${PR_HOST_H}%% ${PROMPT}"
     #else
