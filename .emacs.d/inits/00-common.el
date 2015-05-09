@@ -19,6 +19,9 @@
  '(cssm-indent-level 2)
  '(cssm-indent-function #'cssm-c-style-indenter)
 
+ ;; delete space taht end of line
+ (add-hook 'before-save-hook 'delete-trailing-whitespace)
+ 
  ;; open big file
  '(large-file-warning-threshold nil)
 

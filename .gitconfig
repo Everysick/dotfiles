@@ -1,5 +1,14 @@
 [user]
-	name = everysick
-	email = s.wakeup31@gmail.com
+  name = everysick
+  email = s.wakeup31@gmail.com
+[color]
+  ui = auto
+[alias]
+  st = status
+  co = checkout
+  ca = commit
+  ps = push
+  lg = log --stat --graph
+  pl = pull
 [push]
-	default = simple
+  default = simple
