@@ -103,7 +103,7 @@ export PATH="${PATH}:/usr/local/bin:/usr/local/sbin"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="$PATH:./node_modules/.bin"
-
+export GOPATH="/Users/everysick/go"
 
 # copy alias
 alias -g C="| pbcopy"
@@ -111,7 +111,7 @@ alias -g E="| ./a.out"
 alias -g TMP="cat /Users/everysick/competition/MyLibrary/contest_template.cpp >"
 
 # rbenv
-which rbenv > /dev/null 2>&1 
+which rbenv > /dev/null 2>&1
 if [ $? = 0 ]; then
     eval "$(rbenv init -)"
 fi
