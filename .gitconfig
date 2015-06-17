@@ -6,7 +6,7 @@
 [alias]
   st = status
   co = checkout
-  ca = commit
+  cm = commit
   ps = push
   lg = log --stat --graph
   pl = pull
