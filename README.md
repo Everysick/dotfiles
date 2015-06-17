@@ -1,22 +1,15 @@
 # Everysick dotfiles
 
-<<<<<<< HEAD
 The dotfiles Everysick uses.
 (based dotfile: koba789)
-=======
-The dotfiles KOBA789 uses.
 
 ## How to Use
 
-1. clone
- - `git clone https://github.com/KOBA789/dotfiles.git`
- - `cd dotfiles`
-2. make
+1. run make
  - `make`
 
 ## Warning
 
 This Makefile overwrites these files in $HOME: `.emacs` `.tmux.conf` `.zshrc` `.gitconfig` `.gitignore` `.emacs.d/**`. Back up the files if you need.
 
-In default, the user profile in `.gitconfig` is KOBA789's. Please rewrite it according to your own profile.
->>>>>>> c5820313f33fe9ef1a69a54810e43ddc608d1e6c
+In default, the user profile in `.gitconfig` is everysick's. Please rewrite it according to your own profile.
