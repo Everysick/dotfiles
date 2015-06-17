@@ -21,7 +21,7 @@
 
  ;; delete space taht end of line
  (add-hook 'before-save-hook 'delete-trailing-whitespace)
- 
+
  ;; open big file
  '(large-file-warning-threshold nil)
 
@@ -209,6 +209,10 @@
 
 ;; -ruby-mode
 (setq ruby-insert-encoding-magic-comment nil)
+
+;; disable magic comment
+(require 'ruby-mode)
+(defun ruby-mode-set-encoding () nil)
 
 ;; -menu-bar
 (menu-bar-mode 0)
