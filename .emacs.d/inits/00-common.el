@@ -192,6 +192,9 @@
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 (add-to-list 'ac-modes 'coffee-mode)
 
+;; -scala-mode
+(add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))
+
 ;; -c-mode
 (defun linux-style ()
   (setq c-default-style "linux"
