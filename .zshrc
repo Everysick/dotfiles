@@ -108,7 +108,7 @@ export GOPATH="/Users/everysick/go"
 # copy alias
 alias -g C="| pbcopy"
 alias -g E="| ./a.out"
-alias -g TMP="cat /Users/everysick/com/MyLibrary/contest_template.cpp >"
+alias -g TMP="curl https://gist.githubusercontent.com/Everysick/5b9f8f7c57e55af0b135/raw/65530108f901fa5453849ae96935b0fe667533da/contest_template.cpp >"
 
 # rbenv
 which rbenv > /dev/null 2>&1
