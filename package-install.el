@@ -44,9 +44,9 @@
     web-mode
     yagist
     yaml-mode
-    yasnippet
     yaxception
     zlc
+    enh-ruby-mode
     ))
 
 (defun bundle-install ()

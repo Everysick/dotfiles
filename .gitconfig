@@ -4,11 +4,11 @@
 [color]
   ui = auto
 [alias]
-  st = status
-  co = checkout
-  cm = commit
-  ps = push
-  lg = log --stat --graph
-  pl = pull
+	st = status
+	co = checkout
+	ca = commit -a
+	ps = push
+	lg = log --stat --graph --decorate=full
+	pl = pull
 [push]
   default = simple
