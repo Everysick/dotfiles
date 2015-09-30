@@ -99,7 +99,7 @@ bindkey "^[[A" up-line-or-search
 bindkey "^[[B" down-line-or-search
 
 # PATH
-which brew > /dev/null 2>&1 
+which brew > /dev/null 2>&1
 if [ $? = 0 ]; then
     export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 fi
@@ -122,7 +122,7 @@ fi
 
 
 # ls aliases
-alias ls='ls --color=auto'
+alias ls='ls'
 alias l="ls"
 alias la="ls"
 alias ll="ls -la"
