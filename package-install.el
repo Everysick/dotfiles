@@ -47,6 +47,7 @@
     yaxception
     zlc
     enh-ruby-mode
+    scala-mode2
     ))
 
 (defun bundle-install ()
