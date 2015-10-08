@@ -35,7 +35,7 @@
  ;; json
  '(js-indent-level 2)
 
-  ;; disable backup
+ ;; disable backup
  '(make-backup-files nil)
 
  ;; disable auto save
@@ -47,10 +47,10 @@
  ;; direx icon
  '(direx:leaf-icon "  ")
  '(direx:open-icon "- ")
- '(direx:closed-icon "+ ")
+ '(direx:closed-icon "+ "))
 
  ;; highlight trailing whitespace
- '(show-trailing-whitespace t))
+ ;;'(show-trailing-whitespace t))
 
 ;; -Keybindings
 ;; --ToggleTruncateLines
@@ -302,10 +302,21 @@
 (defun th-find-file-sudo (file)
   "Opens FILE with root privileges."
   (interactive "F")
-    (set-buffer (find-file (concat "/sudo::" file))))
+  (set-buffer (find-file (concat "/sudo::" file))))
 
 ;; -opacity
 (defun on-after-init ()
   (unless (display-graphic-p (selected-frame))
     (set-face-background 'default "unspecified-bg" (selected-frame))))
 (add-hook 'window-setup-hook 'on-after-init)
+
+;; -proof general
+(load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
+;; to use C-c C-j for proof-goto-point
+(defadvice coq-mode-config (after deactivate-holes-mode () activate)
+  "Deactivate holes-mode when coq-mode is activated."
+  (progn (holes-mode 0))
+  )
+(add-hook 'proof-mode-hook
+          '(lambda ()
+             (define-key proof-mode-map (kbd "C-c C-j") 'proof-goto-point)))
