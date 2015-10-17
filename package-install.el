@@ -49,6 +49,7 @@
     zlc
     enh-ruby-mode
     scala-mode2
+    elixir-mode
     ))
 
 (defun bundle-install ()
