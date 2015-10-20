@@ -142,6 +142,7 @@ alias brew-heroku="/usr/local/bin/heroku"
 
 # pkgconfig
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig"
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:/usr/local/opt/libxml2/lib/pkgconfig:${PKG_CONFIG_PATH}"
 
 # make sandbox
 MKSDBX="${HOME}/src/mksdbx/mksdbx"
