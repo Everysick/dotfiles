@@ -40,6 +40,7 @@
     scss-mode
     slim-mode
     sws-mode
+    tuareg
     tss
     w3m
     web-mode
