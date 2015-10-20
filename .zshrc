@@ -27,7 +27,7 @@ export COLOR_LIGHT=${THEME_COLOR#*-}
 
 # profile
 PROFILE_DEFAULT_USER=eveysick
-PROFILE_DEFAULT_HOST=MBA
+PROFILE_DEFAULT_HOST=EVERYSICK
 
 # color
 autoload colors
@@ -41,20 +41,11 @@ PR_USER="%n%F{250}%f"
 PR_HOST="%m"
 PR_HOST_H="%B%K{$COLOR_DARK}%m%k%b${PR_COLON}"
 precmd() {
-    LANG=en_US.UTF-8 vcs_info
+    ANG=en_US.UTF-8 vcs_info
     PROMPT="%F{32}%~%F{93}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
-    #if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
-    #    PROMPT="${PR_HOST_H}%% ${PROMPT}"
-    #else
-    #    PROMPT="${PROMPT}"
-    #fi
-    #    PROMPT="${PR_HOST_H}${PROMPT}"
-    #    if [ $PROFILE_DEFAULT_USER != $(whoami) ]; then
-    #        PROMPT="${PR_USER}${PROMPT}"
-    #    fi
-    #elif [ $PROFILE_DEFAULT_USER != $(whoami) ]; then
-    #    PROMPT="${PR_USER}${PR_HOST}${PROMPT}"
-    #fi
+    if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
+        PROMPT="${PR_HOST_H}${PROMPT}"
+    fi
 }
 
 # completion
