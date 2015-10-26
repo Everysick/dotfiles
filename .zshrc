@@ -145,3 +145,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 #start redis
 alias sredis="redis-server /usr/local/etc/redis.conf"
+
+# OPAM configuration
+. /Users/everysick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
