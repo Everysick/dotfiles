@@ -1,7 +1,7 @@
 # inits
-#for f in $(ls ${HOME}/.zsh/*.zsh | sort); do
-#    source $f
-#done
+for f in $(ls ${HOME}/.zsh/*.zsh | sort); do
+    source $f
+done
 
 # theme
 
@@ -88,8 +88,6 @@ export EDITOR='emacs'
 
 # key map
 bindkey -e
-bindkey "^[[A" up-line-or-search
-bindkey "^[[B" down-line-or-search
 
 # PATH
 which brew > /dev/null 2>&1
@@ -102,17 +100,11 @@ export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="$PATH:./node_modules/.bin"
 export GOPATH="/Users/everysick/go"
 
-# copy alias
-alias -g C="| pbcopy"
-alias -g E="| ./a.out"
-alias -g TMP="curl https://gist.githubusercontent.com/Everysick/5b9f8f7c57e55af0b135/raw/65530108f901fa5453849ae96935b0fe667533da/contest_template.cpp >"
-
 # rbenv
 which rbenv > /dev/null 2>&1
 if [ $? = 0 ]; then
     eval "$(rbenv init -)"
 fi
-
 
 # ls aliases
 alias ls='ls'
@@ -121,32 +113,10 @@ alias la="ls"
 alias ll="ls -la"
 alias sl="ls"
 
-# git aliases
-alias gps="git push"
-alias gpl="git pull"
-alias gco="git checkout"
-alias gmg="git merge"
-alias gcp="git cherry-pick"
-alias glg="git log"
-
-
-# heroku command
-alias brew-heroku="/usr/local/bin/heroku"
-
-# pkgconfig
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig"
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:/usr/local/opt/libxml2/lib/pkgconfig:${PKG_CONFIG_PATH}"
 
 # make sandbox
 MKSDBX="${HOME}/src/mksdbx/mksdbx"
 if [ -f $MKSDBX ]; then
     source $MKSDBX
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-#start redis
-alias sredis="redis-server /usr/local/etc/redis.conf"
-
-# OPAM configuration
-. /Users/everysick/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
