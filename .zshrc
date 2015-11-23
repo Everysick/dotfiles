@@ -6,13 +6,13 @@ done
 # theme
 
 if [ -z $THEME_COLOR ]; then
-    THEME_COLOR=sky
+    THEME_COLOR=blue
 fi
 
 case $THEME_COLOR in
     orange    ) THEME_COLOR=166-172;;
     green     ) THEME_COLOR=28-35;;
-    blue      ) THEME_COLOR=25-32;;
+    blue      ) THEME_COLOR=25-31;;
     sky       ) THEME_COLOR=32-39;;
     red       ) THEME_COLOR=124-160;;
     raspberry ) THEME_COLOR=125-126;;
@@ -36,16 +36,15 @@ colors
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '#%b'
 zstyle ':vcs_info:*' actionformats '#%b|%a'
-PR_USER="%n%F{250}%f"
-PR_HOST="%m"
-PR_HOST_H="%B%K{$COLOR_DARK}%m%k%b"
+PR_USER="%B%K{$COLOR_LIGHT}%n%k%b"
+PR_HOST="%B%K{$COLOR_DARK}%m%k%b"
 precmd() {
     ANG=en_US.UTF-8 vcs_info
     PROMPT="%F{32}%~%F{93}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
     if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
-        PROMPT="${PR_HOST_H}%# ${PROMPT}"
+        PROMPT="${PR_USER}|${PR_HOST}%|${PROMPT}"
     else
-        PROMPT="${PROMPT}"
+        PROMPT="${PR_USER}|${PROMPT}"
     fi
 }
 
