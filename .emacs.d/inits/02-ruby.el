@@ -13,7 +13,7 @@
           (setq indent (current-indentation)))))
     (when indent
       (indent-line-to indent)
-        (when (> offset 0) (forward-char offset)))))
+      (when (> offset 0) (forward-char offset)))))
 
 (add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
