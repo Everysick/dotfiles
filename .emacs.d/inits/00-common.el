@@ -59,6 +59,15 @@
 ;; --BackwardChar
 (global-set-key "\C-h" 'delete-backward-char)
 
+;; --Auto indet
+(require 'point-undo)
+(defun all-indent ()
+  (interactive)
+  (mark-whole-buffer)
+  (indent-region (region-beginning)(region-end))
+  (point-undo))
+(global-set-key (kbd  "C-x C-]") 'all-indent)
+
 ;; -Powerline
 (defun git-branch-mode-line ()
   (let* ((branch (replace-regexp-in-string
@@ -312,7 +321,6 @@
 
 ;; -proof general
 (load-file "/usr/local/share/emacs/site-lisp/ProofGeneral/generic/proof-site.el")
-;; to use C-c C-j for proof-goto-point
 (defadvice coq-mode-config (after deactivate-holes-mode () activate)
   "Deactivate holes-mode when coq-mode is activated."
   (progn (holes-mode 0))

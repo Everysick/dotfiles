@@ -51,6 +51,7 @@
     enh-ruby-mode
     scala-mode2
     elixir-mode
+    point-undo
     ))
 
 (defun bundle-install ()
