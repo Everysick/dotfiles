@@ -6,8 +6,7 @@ done
 # theme
 
 if [ -z $THEME_COLOR ]; then
-    # default is raspberry
-    THEME_COLOR=raspberry
+    THEME_COLOR=sky
 fi
 
 case $THEME_COLOR in
@@ -39,12 +38,12 @@ zstyle ':vcs_info:*' formats '#%b'
 zstyle ':vcs_info:*' actionformats '#%b|%a'
 PR_USER="%n%F{250}%f"
 PR_HOST="%m"
-PR_HOST_H="%B%K{$COLOR_DARK}%m%k%b${PR_COLON}"
+PR_HOST_H="%B%K{$COLOR_DARK}%m%k%b"
 precmd() {
     ANG=en_US.UTF-8 vcs_info
     PROMPT="%F{32}%~%F{93}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
     if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
-        PROMPT="${PR_HOST_H}%% ${PROMPT}"
+        PROMPT="${PR_HOST_H}%# ${PROMPT}"
     else
         PROMPT="${PROMPT}"
     fi
