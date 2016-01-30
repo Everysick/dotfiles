@@ -10,6 +10,7 @@ if [ -z $THEME_COLOR ]; then
 fi
 
 case $THEME_COLOR in
+    kazesawa  ) THEME_COLOR=32-93;;
     orange    ) THEME_COLOR=166-172;;
     green     ) THEME_COLOR=28-35;;
     blue      ) THEME_COLOR=25-31;;
@@ -41,7 +42,7 @@ PR_USER="%B%K{$COLOR_LIGHT} %n %k%b"
 PR_HOST="%B%K{$COLOR_DARK} %m %k%b"
 precmd() {
     ANG=en_US.UTF-8 vcs_info
-    PROMPT="%F{32}%~%F{93}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
+    PROMPT="%F{$COLOR_DARK}%~%F{$COLOR_LIGHT}${vcs_info_msg_0_}%F{250}%(!.#.$)%f "
     if [ $PROFILE_DEFAULT_HOST != $(hostname -s) ]; then
         PROMPT="${PR_TIME}${PR_USER}${PR_HOST} ${PROMPT}"
     else
