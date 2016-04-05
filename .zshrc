@@ -10,6 +10,7 @@ if [ -z $THEME_COLOR ]; then
 fi
 
 case $THEME_COLOR in
+    sumire    ) THEME_COLOR=141-26;;
     kazesawa  ) THEME_COLOR=32-93;;
     sakura    ) THEME_COLOR=76-212;;
     ran       ) THEME_COLOR=124-90;;
