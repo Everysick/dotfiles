@@ -234,6 +234,13 @@
         tab-width 8))
 (add-hook 'c-mode-hook 'linux-style)
 
+;; -cpp-mode
+(add-hook 'c++-mode-hook
+          '(lambda ()
+             (setq tab-width 4)
+             (setq indent-tabs-mode t)
+             (setq c-basic-offset 4)))
+
 ;; -scss-mode
 (add-hook 'scss-mode-hook
           '(lambda ()
