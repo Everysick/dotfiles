@@ -101,7 +101,10 @@ export PATH="${PATH}:/usr/local/bin:/usr/local/sbin"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="$PATH:./node_modules/.bin"
+
+# golang
 export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:${PATH}"
 
 # rbenv
 which rbenv > /dev/null 2>&1
