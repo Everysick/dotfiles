@@ -49,8 +49,6 @@
     yaxception
     zlc
     enh-ruby-mode
-    scala-mode2
-    elixir-mode
     point-undo
     ))
 
