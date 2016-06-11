@@ -52,6 +52,7 @@
     scala-mode2
     elixir-mode
     point-undo
+    flycheck
     ))
 
 (defun bundle-install ()
