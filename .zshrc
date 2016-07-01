@@ -77,6 +77,7 @@ HISTFILE="${HOME}/.zsh_history"
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt extended_history
+setopt hist_ignore_dups
 setopt share_history
 
 if [[ "${terminfo[kcuu1]}" != "" ]]; then
