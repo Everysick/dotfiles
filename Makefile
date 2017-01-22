@@ -17,6 +17,7 @@ zsh:
 	ln -s -f ${PWD}/.zshrc ${HOME}/.zshrc
 	mkdir -p ${HOME}/.zsh/functions
 	if [ ! -e ${HOME}/.zsh/00-machine.zsh ]; then cp ${PWD}/.zsh/00-machine.zsh ${HOME}/.zsh/00-machine.zsh; fi
+	ln -s -f ${PWD}/.zsh/ext-* ${HOME}/.zsh/
 
 npm_completion: zsh
 	if [ $(shell which npm 2>&1 > /dev/null; echo $$?) -eq 0 ]; then \
