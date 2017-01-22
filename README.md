@@ -1,12 +1,20 @@
-# Everysick dotfiles
+# dotfiles
 
 The dotfiles Everysick uses.
 (based dotfile: koba789)
 
 ## How to Use
 
-1. run make
- - `make`
+1. Clone this repository by ghq
+
+```
+$ git clone https://github.com/Everysick/dotfiles.git ~/src/github.com/Everysick/dotfiles
+```
+2. Run make
+
+```
+$ cd ~/src/github.com/Everysick/dotfiles && make all
+```
 
 ## Warning
 
