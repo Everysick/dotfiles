@@ -104,8 +104,10 @@ export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="$PATH:./node_modules/.bin"
 
 # golang
-export GOPATH="${HOME}/go"
-export PATH="${GOPATH}/bin:${PATH}"
+if [ -x "`which go`" ]; then
+    export GOPATH="${HOME}/go"
+    export PATH="${GOPATH}/bin:${PATH}"
+fi
 
 # rbenv
 which rbenv > /dev/null 2>&1
