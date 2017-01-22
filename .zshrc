@@ -123,9 +123,3 @@ alias ll="ls -la"
 alias sl="ls"
 
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig"
-
-# make sandbox
-MKSDBX="${HOME}/src/mksdbx/mksdbx"
-if [ -f $MKSDBX ]; then
-    source $MKSDBX
-fi
