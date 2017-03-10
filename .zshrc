@@ -123,3 +123,4 @@ alias ll="ls -la"
 alias sl="ls"
 
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig"
+source "${HOME}/.zsh/ext-peco.zsh"
