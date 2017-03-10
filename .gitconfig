@@ -8,7 +8,7 @@
 	co = checkout
 	ca = commit -a
 	ps = push
-	unstage = rm --cached
+	unstage = reset HEAD
 	lg = log --stat --graph --decorate=full
 	pl = pull
 [push]
