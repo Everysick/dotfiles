@@ -11,6 +11,10 @@
 	unstage = reset HEAD
 	lg = log --stat --graph --decorate=full
 	pl = pull
+[pull]
+  rebase = true
+[merge]
+  ff = only
 [push]
   default = simple
 [filter "lfs"]
@@ -19,3 +23,6 @@
 	smudge = git-lfs smudge %f
 [ghq]
 	root = ~/src
+[core]
+	precomposeunicode = true
+	quotepath = false
