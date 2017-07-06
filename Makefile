@@ -1,4 +1,4 @@
-all: emacs zsh tmux npm_completion brew_completion git
+all: emacs zsh tmux npm_completion brew_completion git macos
 
 emacs:
 	ln -s -f ${PWD}/.emacs ${HOME}/.emacs
@@ -37,4 +37,11 @@ git:
 	ln -s -f ${PWD}/.gitignore_ ${HOME}/.gitignore
 	touch ${HOME}/.gitconfig.local
 
-.PHONY: all emacs zsh npm_completion brew_completion tmux git
+macos:
+	if [ `uname` == 'Darwin' ]; then \
+		defaults write -g InitialKeyRepeat -int 13; \
+		defaults write -g KeyRepeat -int 1; \
+		echo "Need Reboot"; \
+	fi
+
+.PHONY: all emacs zsh npm_completion brew_completion tmux git macos
