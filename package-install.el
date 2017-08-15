@@ -53,6 +53,10 @@
     enh-ruby-mode
     point-undo
     flycheck
+    rust-mode
+    racer
+    flycheck-rust
+    ripgrep
     ))
 
 (defun bundle-install ()

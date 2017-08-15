@@ -27,7 +27,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (bison-mode lex company toml-mode racer flycheck-rust rust-mode ocp-indent zlc yaml-mode yagist web-mode w3m tuareg tss sws-mode slim-mode scss-mode robe popwin point-undo ox-gfm nginx-mode markdown-mode+ less-css-mode js2-refactor jade-mode init-loader haml-mode go-mode go-autocomplete gist flycheck esup erlang enh-ruby-mode direx coffee-mode actionscript-mode)))
+    (ripgrep llvm-mode sass-mode bison-mode lex company toml-mode racer flycheck-rust rust-mode ocp-indent zlc yaml-mode yagist web-mode w3m tuareg tss sws-mode slim-mode scss-mode robe popwin point-undo ox-gfm nginx-mode markdown-mode+ less-css-mode js2-refactor jade-mode init-loader haml-mode go-mode go-autocomplete gist flycheck esup erlang enh-ruby-mode direx coffee-mode actionscript-mode)))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
