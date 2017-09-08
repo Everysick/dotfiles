@@ -17,6 +17,8 @@
     gist
     go-autocomplete
     go-mode
+    go-eldoc
+    company-go
     haml-mode
     init-loader
     jade-mode
