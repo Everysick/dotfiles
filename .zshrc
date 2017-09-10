@@ -102,6 +102,7 @@ export PATH="${PATH}:/usr/local/bin:/usr/local/sbin"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 export PATH="$PATH:./node_modules/.bin"
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # golang
 if [ -x "`which go`" ]; then
