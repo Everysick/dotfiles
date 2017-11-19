@@ -31,6 +31,7 @@ brew_completion: zsh
 
 tmux:
 	ln -s -f ${PWD}/.tmux.conf ${HOME}/.tmux.conf
+	ln -s -f ${PWD}/.tmux-reattach-to-user-namespace.conf ${HOME}/.tmux-reattach-to-user-namespace.conf
 
 git:
 	ln -s -f ${PWD}/.gitconfig ${HOME}/.gitconfig
