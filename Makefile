@@ -8,6 +8,7 @@ emacs:
 
 	mkdir -p ${HOME}/.emacs.d/themes
 	ln -s -f ${PWD}/.emacs.d/themes/dark-laptop-theme.el ${HOME}/.emacs.d/themes/dark-laptop-theme.el
+	ln -s -f ${PWD}/.emacs.d/themes/sky-color-clock.el ${HOME}/.emacs.d/themes/sky-color-clock.el
 
 	mkdir -p ${HOME}/.emacs.d/elisp
 

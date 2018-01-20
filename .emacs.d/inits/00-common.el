@@ -1,4 +1,5 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'load-path "~/.emacs.d/themes/")
 
 (let ((default-directory (expand-file-name "~/.emacs.d/elisp")))
   (add-to-list 'load-path default-directory)
@@ -69,6 +70,11 @@
 (global-set-key (kbd  "C-x C-]") 'all-indent)
 
 ;; -Powerline
+(require 'sky-color-clock)
+(sky-color-clock-initialize 35)
+(setq sky-color-clock-format "( ∂ ∇ ∂) %H : %M : %S ")
+(setq sky-color-clock-enable-emoji-icon nil)
+
 (defun git-branch-mode-line ()
   (let* ((branch (replace-regexp-in-string
                   "[\r\n]+\\'" ""
@@ -80,7 +86,8 @@
 (line-number-mode t)
 (column-number-mode t)
 (setq-default mode-line-format
-              '((:propertize " %m :"           face mode-line-modes)
+              '((:eval (sky-color-clock))
+                (:propertize " %m :"           face mode-line-modes)
                 (:propertize minor-mode-alist  face mode-line-modes)
                 (:propertize " "               face mode-line-modes)
                 (:propertize " %b "            face mode-line-buffer-name)
