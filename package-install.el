@@ -53,7 +53,7 @@
     yaxception
     zlc
     enh-ruby-mode
-    point-undo
+    ;;point-undo
     flycheck
     rust-mode
     racer

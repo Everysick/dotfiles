@@ -61,13 +61,13 @@
 (global-set-key "\C-h" 'delete-backward-char)
 
 ;; --Auto indet
-(require 'point-undo)
-(defun all-indent ()
-  (interactive)
-  (mark-whole-buffer)
-  (indent-region (region-beginning)(region-end))
-  (point-undo))
-(global-set-key (kbd  "C-x C-]") 'all-indent)
+;; (require 'point-undo)
+;; (defun all-indent ()
+;;   (interactive)
+;;   (mark-whole-buffer)
+;;   (indent-region (region-beginning)(region-end))
+;;   (point-undo))
+;; (global-set-key (kbd  "C-x C-]") 'all-indent)
 
 ;; -Powerline
 (require 'sky-color-clock)
