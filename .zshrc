@@ -113,10 +113,16 @@ if [ -x "`which go`" ]; then
     export PATH="${GOPATH}/bin:${PATH}"
 fi
 
-# rbenv
+# rbenv init
 which rbenv > /dev/null 2>&1
 if [ $? = 0 ]; then
     eval "$(rbenv init -)"
+fi
+
+# pyenv init
+which pyenv > /dev/null 2>&1
+if [ $? = 0 ]; then
+    eval "$(pyenv init -)"
 fi
 
 # ls aliases
