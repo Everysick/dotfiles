@@ -129,7 +129,7 @@ fi
 alias ls='ls'
 alias l="ls"
 alias la="ls"
-alias ll="ls -la"
+alias ll="ls -lah"
 alias sl="ls"
 
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig"
