@@ -113,6 +113,12 @@ if [ -x "`which go`" ]; then
     export PATH="${GOPATH}/bin:${PATH}"
 fi
 
+# rustup
+if [ -x "`which rustup`" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+    export RUST_SRC_PATH=$(echo ~/.rustup/toolchains/*/lib/rustlib/src/rust/src)
+fi
+
 # rbenv init
 which rbenv > /dev/null 2>&1
 if [ $? = 0 ]; then
