@@ -40,7 +40,7 @@ git:
 	touch ${HOME}/.gitconfig.local
 
 macos:
-	if [ `uname` == 'Darwin' ]; then \
+	if [ "$(uname)" == 'Darwin' ]; then \
 		defaults write -g InitialKeyRepeat -int 13; \
 		defaults write -g KeyRepeat -int 1; \
 		echo "Need Reboot"; \
