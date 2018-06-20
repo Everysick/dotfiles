@@ -50,8 +50,8 @@
  '(direx:open-icon "- ")
  '(direx:closed-icon "+ "))
 
- ;; highlight trailing whitespace
- ;;'(show-trailing-whitespace t))
+;; highlight trailing whitespace
+;;'(show-trailing-whitespace t))
 
 ;; -Keybindings
 ;; --ToggleTruncateLines
