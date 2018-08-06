@@ -27,3 +27,5 @@
 	precomposeunicode = true
 	quotepath = false
   pager = LESSCHARSET=utf-8 less -cm
+[url "git@github.com:"]
+    insteadOf = https://github.com/
