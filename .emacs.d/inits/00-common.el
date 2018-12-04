@@ -236,9 +236,9 @@
 ;; -c-mode
 (defun linux-style ()
   (setq c-default-style "linux"
-        c-basic-offset 8
+        c-basic-offset 4
         indent-tabs-mode t
-        tab-width 8))
+        tab-width 4))
 (add-hook 'c-mode-hook 'linux-style)
 
 ;; -cpp-mode
