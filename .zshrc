@@ -116,7 +116,6 @@ fi
 # rustup
 if [ -x "`which rustup`" ]; then
     export PATH="$HOME/.cargo/bin:$PATH"
-    export RUST_SRC_PATH=$(echo ~/.rustup/toolchains/*/lib/rustlib/src/rust/src)
 fi
 
 # rbenv init
